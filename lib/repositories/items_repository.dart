@@ -14,7 +14,7 @@ class ItemsRepository {
             id: doc.id,
             title: doc['title'],
             imageURL: doc['image_url'],
-            releaseDate: (doc['release_date'] as Timestamp).toString(),
+            releaseDate: (doc['release_date'] as Timestamp).toDate(),
           );
         },
       ).toList();
@@ -32,7 +32,7 @@ class ItemsRepository {
       id: doc.id,
       title: doc['title'],
       imageURL: doc['image_url'],
-      releaseDate: (doc['release_date'] as Timestamp).toString(),
+      releaseDate: (doc['release_date'] as Timestamp).toDate(),
     );
   }
 
